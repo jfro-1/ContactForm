@@ -29,7 +29,7 @@ class ContactController extends Controller
             'file' => $request->file
         ];
 
-
+        // alle informatie gaat daar (jfroosama10@gmail.com)
         Mail::to('jfroosama10@gmail.com')->send(new ContactMail($details));
         return back()->with('message_send', 'we will answer you:');
     }
